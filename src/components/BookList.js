@@ -5,10 +5,10 @@ import BooksDetails from './BooksDetails';
 const BookList = () => {
     const {books} = useContext(BookContext);
    return(
-     books.length > 0 ? (
+     books && books.length > 0 ? (
          <div className="book-list">
              <ul>
-                 {books.map(book => (
+                 {books && books.map(book => (
                      <BooksDetails book={book} key={book.id}/>
                  ))}
              </ul>
